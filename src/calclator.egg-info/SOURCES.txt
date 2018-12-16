@@ -1,0 +1,6 @@
+README.md
+src/calclator.egg-info/PKG-INFO
+src/calclator.egg-info/SOURCES.txt
+src/calclator.egg-info/dependency_links.txt
+src/calclator.egg-info/entry_points.txt
+src/calclator.egg-info/top_level.txt
