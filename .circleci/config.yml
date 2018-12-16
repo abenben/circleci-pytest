@@ -24,8 +24,6 @@ jobs:
           name: run test-cov
           command: |
             . venv/bin/activate
-            # pytest --junitxml=test-reports/junit.xml
-            # pytest --cov=src --cov-report=html:test-reports
             pytest --cov=src
+            # pytest --cov=src --cov-report=html:test-reports
             # pytest --cov=src --cov-report=xml:test-reports
-            # pyrest -v
