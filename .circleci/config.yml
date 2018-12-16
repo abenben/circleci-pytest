@@ -17,8 +17,8 @@ jobs:
           name: run test
           command: |
             . venv/bin/activate
-            pytest --cov=src
+            pytest --cov=src term --cov-report=xml:test-reports/cov.xml
             # pytest --junitxml=test-reports/junit.xml
             # pyrest -v
-#      - store-test-results:
-#          path: test-reports
+      - store-test-results:
+          path: test-reports
