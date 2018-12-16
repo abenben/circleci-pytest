@@ -14,14 +14,7 @@ jobs:
             pip install pytest-cov
             pip install -e ./.
       - run:
-          name: run test1
-          command: |
-            . venv/bin/activate
-            pytest --junitxml=test-reports/junit.xml
-      - store-test-results:
-          path: test-reports
-      - run:
-          name: run test2
+          name: run test-cov
           command: |
             . venv/bin/activate
             # pytest --junitxml=test-reports/junit.xml
@@ -29,3 +22,10 @@ jobs:
             pytest --cov=src
             # pytest --cov=src --cov-report=xml:test-reports
             # pyrest -v
+      - run:
+          name: run test
+          command: |
+            . venv/bin/activate
+            pytest --junitxml=test-reports/junit.xml
+      - store-test-results:
+          path: test-reports
