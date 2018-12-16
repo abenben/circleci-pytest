@@ -11,12 +11,14 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install pytest
+            pip install pytest-cov
             pip install -e ./.
       - run:
           name: run test
           command: |
             . venv/bin/activate
-            pytest --junitxml=test-reports/junit.xml
-            pyrest -v
-      - store-test-results:
-          path: test-reports
+            pytest --cov=src
+            # pytest --junitxml=test-reports/junit.xml
+            # pyrest -v
+#      - store-test-results:
+#          path: test-reports
