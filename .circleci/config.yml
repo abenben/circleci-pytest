@@ -16,7 +16,7 @@ jobs:
           name: run test
           command: |
             . venv/bin/activate
-            # pyrest -v
             pytest --junitxml=test-reports/junit.xml
+            pyrest -v
       - store-test-results:
           path: test-reports
