@@ -2,3 +2,4 @@
 .pytest_cache
 .coverage
 test-reports
+tests/__pycache__
