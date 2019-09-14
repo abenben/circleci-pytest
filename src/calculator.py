@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 class Calculator(object):
 
     def addition(self, x, y):

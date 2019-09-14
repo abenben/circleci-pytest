@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import calculator
 import pytest
 
@@ -16,7 +18,7 @@ multiplication_lists=(
     [0,0,0],
     [1,1,1],
     [5,1,5],
-    [10,10,10])
+    [10,10,100])
 
 division_lists=(
     [0,1,0],
