@@ -1,4 +1,6 @@
 .pytest_cache
 .coverage
+.DS_Store
 test-reports
+src/__pycache__
 tests/__pycache__
