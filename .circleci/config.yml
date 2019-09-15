@@ -39,5 +39,3 @@ jobs:
           command: |
             . venv/bin/activate
             pytest --cov=src
-            # pytest --cov=src --cov-report=html:test-reports
-            # pytest --cov=src --cov-report=xml:test-reports
