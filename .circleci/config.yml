@@ -3,8 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.6.3
-    resource_class: small
-    working_directory: ~/repo
+    #resource_class: small
+    #working_directory: ~/repo
     steps:
       - checkout
       - run:
