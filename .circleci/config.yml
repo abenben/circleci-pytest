@@ -3,6 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.6.3
+    resource_class: small
+    working_directory: ~/repo
     steps:
       - checkout
       - run:
@@ -14,13 +16,24 @@ jobs:
             pip install pytest
             pip install pytest-cov
             pip install -e ./.
+      - restore_cache:
+           keys:
+              - v1-dependencies-{{ .Branch }}-{{ checksum "setup.py" }}
+              # fallback to using the latest cache if no exact match is found
+              - v1-dependencies-{{ .Branch }}-
+              - v1-dependencies-
       - run:
           name: run test
           command: |
             . venv/bin/activate
+            mkdir -p test-reports
             pytest --junitxml=test-reports/junit.xml
+            #pytest --junitxml=test-reports/junit.xml --cov=packagename --cov-report html:test-reports/coverage
       - store-test-results:
+          path: test-reports/junit.xml
+      - store_artifacts:
           path: test-reports
+          destination: test-reports
       - run:
           name: run test-cov
           command: |

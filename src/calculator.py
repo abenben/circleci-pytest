@@ -1,19 +1,51 @@
 # -*- coding: utf-8 -*-
 
+
 class Calculator(object):
+    """
+    四則演算を行う。
+    """
 
-    def addition(self, x, y):
-        result = x + y;
+    @staticmethod
+    def addition(x, y):
+        """
+        加算を行う。
+        :param x: 左辺
+        :param y: 右辺
+        :return: 計算結果
+        """
+        result = x + y
         return result
 
-    def subtraction(self, x, y):
-        result = x - y;
+    @staticmethod
+    def subtraction(x, y):
+        """
+        減算を行う。
+        :param x: 左辺
+        :param y: 右辺
+        :return: 計算結果
+        """
+        result = x - y
         return result
 
-    def multiplication(self, x, y):
-        result = x * y;
+    @staticmethod
+    def multiplication(x, y):
+        """
+        乗算を行う。
+        :param x: 左辺
+        :param y: 右辺
+        :return: 計算結果
+        """
+        result = x * y
         return result
 
-    def division(self, x, y):
-        result = x / y;
+    @staticmethod
+    def division(x, y):
+        """
+        割算を行う。
+        :param x: 左辺
+        :param y: 右辺
+        :return: 計算結果
+        """
+        result = x / y
         return result

@@ -1,10 +1,10 @@
 {
+    "python.testing.pytestEnabled": true,
     "python.testing.pytestArgs": [
         "--exitfirst",
         "--verbose",
         "tests"
     ],
     "python.testing.unittestEnabled": false,
-    "python.testing.nosetestsEnabled": false,
-    "python.testing.pytestEnabled": true
+    "python.testing.nosetestsEnabled": false
 }
