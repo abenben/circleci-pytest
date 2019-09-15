@@ -27,8 +27,8 @@ jobs:
           command: |
             . venv/bin/activate
             mkdir -p test-reports
-            pytest --junitxml=test-reports/junit.xml
-            #pytest --junitxml=test-reports/junit.xml --cov=packagename --cov-report html:test-reports/coverage
+            #pytest --junitxml=test-reports/junit.xml
+            pytest --junitxml=test-reports/junit.xml --cov=src --cov-report html:test-reports/coverage
       - store-test-results:
           path: test-reports
       - store_artifacts:
