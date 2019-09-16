@@ -5,7 +5,7 @@ import pytest
 
 
 def func_ids(params):
-    return 'Param1={},Param2={}, Result={}'.\
+    return 'Param1={},Param2={}, Result={}'. \
         format(params[0], params[1], params[2])
 
 
@@ -48,7 +48,7 @@ multiplication_lists = (
     [0, 0, 0],
     [1, 1, 1],
     [5, 1, 5],
-    [10, 10, 100])
+    [10, 10, 1000])
 
 
 @pytest.fixture(params=multiplication_lists, ids=func_ids)
@@ -72,7 +72,14 @@ division_lists = (
 def division_task(request):
     return request.param
 
-# def test_division_normal(division_task):
-#   cal = calculator.Calculator()
-#   result = cal.division(division_task[0], division_task[1])
-#   assert result == division_task[2]
+
+def test_division_normal(division_task):
+    cal = calculator.Calculator()
+    result = cal.division(division_task[0], division_task[1])
+    assert result == division_task[2]
+
+
+
+
+
+
