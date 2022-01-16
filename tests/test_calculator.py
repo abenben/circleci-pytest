@@ -48,7 +48,7 @@ multiplication_lists = (
     [0, 0, 0],
     [1, 1, 1],
     [5, 1, 5],
-    [10, 10, 10])
+    [10, 10, 100])
 
 
 @pytest.fixture(params=multiplication_lists, ids=func_ids)
